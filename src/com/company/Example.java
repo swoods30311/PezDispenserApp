@@ -3,10 +3,10 @@ package com.company;
 public class Example {
     public static void main(String[] args) {
 
-        System.out.println("We're creating a new PEZ Dispenser");
-        System.out.printf("FUN FACT: There are %d PEZ allowed in every dispenser %n", PezDispenser.MAX_PEZ);
+        /*System.out.println("We're creating a new PEZ Dispenser");
+        System.out.printf("FUN FACT: There are %d PEZ allowed in every dispenser %n", PezDispenser.MAX_PEZ);*/
         PezDispenser dispenser = new PezDispenser("Yoda");
-        System.out.printf("The dispenser is %s %n", dispenser.getCharacterName());
+        /*System.out.printf("The dispenser is %s %n", dispenser.getCharacterName());
         if (dispenser.isEmpty()) {
             System.out.println("Dispenser is empty");
         }
@@ -29,6 +29,10 @@ public class Example {
         } catch (IllegalArgumentException iae){
             System.out.println("Whoa there!");
             System.out.printf("The error was: %s ", iae.getMessage());
-        }
+        }*/
+        System.out.println(dispenser.getPezCount());
+        dispenser.addPez(4);
+        dispenser.addPez(3);
+        System.out.println(dispenser.getPezCount());
     }
 }

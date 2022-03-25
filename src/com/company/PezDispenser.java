@@ -12,15 +12,17 @@ public class PezDispenser {
     }
 
     public void fill(){
-        fill(MAX_PEZ);
+        addPez(MAX_PEZ);
     }
 
-    public void fill(int pezAmount){
+    public void addPez(int pezAmount){
         int newAmount = pezCount + pezAmount;
         if(newAmount > MAX_PEZ){
             throw new IllegalArgumentException(
                     "TOO MANY PEZ!!! CUT THE SH*T!!!"
             );
+        } else {
+            pezCount = newAmount;
         }
     }
 
@@ -41,5 +43,8 @@ public class PezDispenser {
         return characterName;
     }
 
+    public int getPezCount() {
+        return pezCount;
+    }
 }
 
